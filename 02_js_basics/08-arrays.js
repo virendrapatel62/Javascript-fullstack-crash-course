@@ -5,13 +5,13 @@ console.log(students[0]);
 console.log(students[1]);
 console.log(students[2]);
 
-students.push("supriya");
+students.push("supriya"); // index 4 ["virendra", "sandeep", "harsh" , "supriya"];
 
 console.log(students);
-students.pop();
+students.pop(); //["virendra", "sandeep", "harsh"]
 console.log(students);
 
-console.log(students.length);
+console.log(students.length); // 3
 
 students.forEach(function (item) {
   console.log(item);
