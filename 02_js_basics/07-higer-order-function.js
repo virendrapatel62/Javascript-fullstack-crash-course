@@ -2,7 +2,6 @@ function sayHello() {
   function hello() {
     console.log("Hello From inner function");
   }
-
   return hello;
 }
 
