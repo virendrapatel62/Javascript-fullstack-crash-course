@@ -4,6 +4,24 @@ const substract = (number1, number2) => number1 - number2;
 
 // module.exports = {}
 
+/*
+
 module.exports.sum = sum; //{ sum : funtion}
 module.exports.multiply = multiply; // { sum : funtion , multiply : funtion }
 module.exports.substract = substract; // { sum : funtion , multiply : funtion , substract : funtion  }
+
+*/
+
+// const exportsData = {
+//   sum: sum,
+//   multiply: multiply,
+//   substract: substract,
+// };
+
+// module.exports = exportsData;
+
+module.exports = {
+  sum,
+  multiply,
+  substract,
+};
