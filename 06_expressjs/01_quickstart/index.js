@@ -1,3 +1,4 @@
+const { response } = require("express");
 const express = require("express");
 
 const app = express();
@@ -25,4 +26,33 @@ app.get("/students/:id/:age", (request, response) => {
   console.log(request.params.age);
   console.log(request.params.id);
   return response.json(request.params);
+});
+
+app.put("/students/:id", (request, response) => {
+  console.log("Handling Put Request");
+  console.log("Updating " + request.params.id);
+  return response.json({
+    message: "put request",
+    params: request.params,
+    body: request.body,
+  });
+});
+
+app.delete("/students/:studentid", (request, response) => {
+  console.log("Deleting student of id ", request.params.studentid);
+  response.status(204).json({
+    message: "student deleted",
+  });
+});
+
+app.get("/200", (request, response) => {
+  response.status(200).json({
+    message: "Success Response",
+  });
+});
+
+app.get("/404", (request, response) => {
+  response.status(404).json({
+    message: "Not-found",
+  });
 });
