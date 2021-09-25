@@ -34,7 +34,30 @@ app.get("/course", (request, response) => {
 app.get("/books", (request, response) => {
   response.json({ message: "Books" });
 });
-
 app.use((error, request, response, next) => {
   response.status(500).json({ message: error.message });
 });
+
+const router = express.Router();
+
+router.get("/courses", (request, response) => {
+  response.json({ url: request.url });
+});
+
+router.get("/students", (request, response) => {
+  response.json({ url: request.url });
+});
+
+router.get("/books", (request, response) => {
+  response.json({ url: request.baseUrl });
+});
+
+router.get("/marks", (request, response) => {
+  response.json({ url: request.url });
+});
+
+router.get("/products", (request, response) => {
+  response.json({ url: request.url });
+});
+
+app.use("/api", router);
