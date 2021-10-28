@@ -34,3 +34,15 @@ const Todo = mongoose.model("TODO", todoSchema);
 // ]).then((todos) => {
 //   console.log(todos);
 // });
+
+// Todo.find().then((todos) => {
+//   console.log(todos);
+// });
+
+// Todo.find({ title: "Take Breakfast" }).then((todos) => {
+//   console.log(todos);
+// });
+
+Todo.find({ description: "Something.." }).then((todos) => {
+  console.log(todos);
+});
