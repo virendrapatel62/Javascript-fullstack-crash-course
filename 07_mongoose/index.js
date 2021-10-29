@@ -71,3 +71,23 @@ const Todo = mongoose.model("TODO", todoSchema);
 // Todo.findOneAndDelete({ title: "Take Breakfask" }).then((result) => {
 //   console.log(result);
 // });
+
+// Todo.find().then((result) => {
+//   console.log(result);
+// });
+
+const todoId = "614ffe04b9c751c0bafad96f";
+Todo.updateOne(
+  { _id: todoId },
+  { $set: { description: "updated Description" } }
+).then((updatedResult) => {
+  console.log({ updatedResult });
+});
+
+Todo.findOneAndUpdate(
+  { _id: todoId },
+  { $set: { description: "updated Again  Description firseUpdated" } },
+  { new: true }
+).then((updatedResult) => {
+  console.log({ updatedResult });
+});
