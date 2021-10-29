@@ -25,7 +25,14 @@ function getMeetupById(request, response) {
   });
 }
 function createMeetup(request, response) {
-  response.json([1, 2, 3]);
+  const meetup = request.body;
+  Meetup.create(meetup)
+    .then((meetup) => {
+      response.status(201).json({ meetup });
+    })
+    .catch((err) => {
+      response.status(400).json({ error: err.message });
+    });
 }
 function deleteMeetup(request, response) {
   response.json([1, 2, 3]);
