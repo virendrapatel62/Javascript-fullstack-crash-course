@@ -43,6 +43,31 @@ const Todo = mongoose.model("TODO", todoSchema);
 //   console.log(todos);
 // });
 
-Todo.find({ description: "Something.." }).then((todos) => {
-  console.log(todos);
-});
+// Todo.find({ description: "Something.." }).then((todos) => {
+//   console.log(todos);
+// });
+
+// Todo.find({ _id: "614ffe04b9c751c0bafad970" })
+// .then((todos) => {
+//   console.log(todos);
+// });
+
+// Todo.findById("614ffe04b9c751c0bafad970").then((todo) => {
+//   console.log(todo);
+// });
+
+// Todo.find()
+//   // .sort("title")
+//   .sort("-title")
+//   .then((todos) => {
+//     todos.forEach((todo) => {
+//       console.log(todo.title);
+//     });
+//   });
+
+// Todo.deleteOne({ title: "Take Breakfask" }).then((result) => {
+//   console.log(result);
+// });
+// Todo.findOneAndDelete({ title: "Take Breakfask" }).then((result) => {
+//   console.log(result);
+// });
