@@ -1,0 +1,16 @@
+{
+  "name": "meetup_api",
+  "version": "1.0.0",
+  "description": "practice api",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "npx nodemon index.js"
+  },
+  "author": "virendra",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12"
+  }
+}
