@@ -35,10 +35,20 @@ function createMeetup(request, response) {
     });
 }
 function deleteMeetup(request, response) {
-  response.json([1, 2, 3]);
+  const { id } = request.params;
+  Meetup.deleteOne({ _id: id }).then(() => response.status(204).send());
 }
 function updateMeetup(request, response) {
-  response.json([1, 2, 3]);
+  const update = request.body;
+  const id = request.params.id;
+
+  Meetup.findOneAndUpdate(
+    { _id: id },
+    {
+      $set: update,
+    },
+    { new: true }
+  ).then((updated) => response.json({ meetups: updated }));
 }
 
 module.exports = {
