@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <h1>This is Navbar</h1>
+    </nav>
+    <hr />
+
+    {% block main %}
+    <!-- ..... -->
+    {% endblock %}
+
+    <hr />
+    <footer>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+        ullam, quos consequatur, voluptatum nulla nobis voluptate, dolores amet
+        in ut molestias accusantium sequi labore id iusto commodi aliquid natus
+        rem!
+      </p>
+    </footer>
+  </body>
+</html>
