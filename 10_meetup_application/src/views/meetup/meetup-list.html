@@ -1,1 +1,80 @@
-<h1>Meetup List</h1>
+{% extends '../layout/base.html' %}
+
+<!-- title block  -->
+{% block title %} All Meeetup {% endblock %}
+
+<!-- stle block  -->
+{% block style %}
+<!-- <link rel="stylesheet" href="/css/meetup/list.css" /> -->
+<link rel="stylesheet" href="/css/common.css" />
+{% endblock %}
+
+<!-- Main Block  -->
+{% block main%}
+
+<div>
+  <h1>Meetup List</h1>
+  <hr />
+
+  {% if meetups.length %}
+  <table class="table table-hover table-bordered">
+    <thead>
+      <tr>
+        <th>Sno</th>
+        <th>Image</th>
+        <th>Title</th>
+        <!-- <th>Description</th> -->
+        <th>Location</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for meetup in meetups %}
+
+      <tr>
+        <td>{{loop.index}}</td>
+        <td><img class="meetup-image" src="{{meetup.image}}" alt="" /></td>
+        <td>{{meetup.title}}</td>
+        <!-- <td>{{meetup.description}}</td> -->
+        <td>{{meetup.location}}</td>
+        <td>
+          <div class="d-flex">
+            <form
+              class="delete-form m-2"
+              action="/meetups/delete/{{meetup.id}}"
+              method="post"
+            >
+              <button class="delete-button btn btn-danger btn-sm" type="submit">
+                Delete
+              </button>
+            </form>
+
+            <a
+              href="/meetups/{{meetup.id}}"
+              class="detail-button btn btn-primary btn-sm m-2"
+              >Show more</a
+            >
+          </div>
+        </td>
+      </tr>
+
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {%else%}
+
+  <div class="no-meetups alert alert-info">
+    <p class="display-3">No Meetups</p>
+    <div class="m-4">
+      <a href="/meetups/create" style="text-decoration: none; color: inherit"
+        >Click To Create Meetups</a
+      >
+    </div>
+  </div>
+
+  {% endif %}
+</div>
+
+<!-- End Block  -->
+{% endblock %}

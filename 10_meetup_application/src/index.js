@@ -12,7 +12,9 @@ swig.setDefaults({
 console.log(__dirname + "/views");
 
 const app = express();
+app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "html");
+app.use(express.static("public"));
 app.set("views", __dirname + "/views");
 app.engine("html", swig.renderFile);
 const PORT = 3000;

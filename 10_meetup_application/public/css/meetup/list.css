@@ -1,0 +1,49 @@
+.meetup-image {
+    height: 60px;
+    border-radius: 20%;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  td,
+  th {
+    border: 0.6px solid rgb(173, 171, 171);
+    padding: 5px;
+  }
+
+  .delete-button {
+    color: red;
+    background-color: rgb(235, 155, 155);
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline;
+  }
+  .delete-form {
+    display: inline;
+  }
+  .detail-button {
+    color: rgb(29, 97, 51);
+    background-color: rgb(195, 221, 154);
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline;
+  }
+  .delete-button:hover {
+    background-color: rgb(197, 130, 130);
+  }
+
+  .no-meetups {
+    border: 1px solid green;
+    padding: 20px;
+    text-align: center;
+    color: green;
+    font-size: 40px;
+  }

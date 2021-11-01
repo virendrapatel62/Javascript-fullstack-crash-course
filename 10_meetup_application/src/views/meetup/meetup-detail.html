@@ -1,1 +1,28 @@
-<h1>Meetup Detail</h1>
+{% extends '../layout/base.html' %}
+
+<!-- title block  -->
+{% block title %} {{meetup.title}} {% endblock %}
+
+<!-- start main  -->
+{% block main%}
+
+<div class="mt-4">
+  <div class="shadow p-4">
+    <div class="row">
+      <div class="col">
+        <h1>{{meetup.title}}</h1>
+        <hr />
+        <h4>📍 {{meetup.location}}</h4>
+        <h4>📅 {{meetup.date.toDateString()}}</h4>
+        <hr />
+        <p>{{meetup.description}}</p>
+      </div>
+      <div class="col">
+        <img src="{{meetup.image}}" class="img-fluid rounded" alt="" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end main -->
+{% endblock %}

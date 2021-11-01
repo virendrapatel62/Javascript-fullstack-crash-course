@@ -1,0 +1,43 @@
+
+  form div {
+    margin-top: 10px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input,
+  textarea {
+    width: 60%;
+  }
+
+  button {
+    color: white;
+    background-color: dodgerblue;
+    border: none;
+
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+  }
+
+  button:hover {
+    background-color: rgb(33, 121, 209);
+  }
+
+  .message {
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    background-color: rgb(184, 233, 184);
+  }
+  .error {
+    color: rgb(143, 29, 8);
+    border: 1px solid rgb(150, 51, 5);
+    padding: 10px;
+    background-color: rgb(231, 175, 173);
+  }
+

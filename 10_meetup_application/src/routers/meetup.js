@@ -15,6 +15,8 @@ meetupRouter.get("/", allMeetupPage);
 meetupRouter.get("/create", meetupForm);
 meetupRouter.post("/create", createMeetup);
 meetupRouter.get("/:id", meetupDetailPage);
-meetupRouter.delete("/:id", deleteMeetup);
+
+// meetups/delete/:id
+meetupRouter.post("/delete/:id", deleteMeetup);
 
 module.exports = { meetupRouter };
